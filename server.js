@@ -2,6 +2,9 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+//change to accept dynamic port to use with Heroku
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 //register partials to enable partial views
@@ -64,4 +67,7 @@ app.get('/bad', (req, res) => {
   });
 });
 
-app.listen('3000');
+//change to accept dynamic port to use with Heroku
+app.listen(port, ()=> {
+  console.log(`Listening to port ${port}`);
+});
