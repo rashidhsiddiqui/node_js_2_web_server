@@ -33,10 +33,10 @@ app.use((req, res, next) => {
 });
 
 //express middleware
-app.use((req, res, next) => {
-  res.render('maintenance.hbs');
-  next(); //if we will not call next here then next followed code will not call.
-});
+//app.use((req, res, next) => {
+//  res.render('maintenance.hbs');
+//  next(); //if we will not call next here then next followed code will not call.
+//});
 
 //default route
 app.get('/', (req, res) => {
