@@ -60,6 +60,17 @@ app.get('/about', (req, res) => {
   });
 });
 
+//projects route
+app.get('/projects', (req, res) => {
+  //res.send('Projects page.');
+  //render using Handle bar plugin for template
+  res.render('projects.hbs', {
+      pageTitle: 'Projects page',
+      welcomeMessage: 'Welcome to Projects Page.',
+      //copyRightYear: new Date().getFullYear()
+  });
+});
+
 //bad route (sending json as response)
 app.get('/bad', (req, res) => {
   res.send({
